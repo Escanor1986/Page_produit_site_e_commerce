@@ -1,6 +1,6 @@
 import './Header.css';
 import profilLogo from '../../assets/pictureAvatarReduceSize.png';
-import cart from '../../assets/cart.png';
+import Portal from './Header_Components/Portal/Portal';
 
 const navList: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
@@ -22,11 +22,7 @@ function Header() {
           <ul className="flex flex-row space-x-10 items-center">
             <li className="cursor-pointer">
               <div className="cart-nav-frame">
-                <img
-                  className="cart-nav w-6 h-6 hover:scale-110 transition duration-300"
-                  src={cart}
-                  alt="cart"
-                />
+                <Portal />
               </div>
             </li>
             <li className="cursor-pointer">
