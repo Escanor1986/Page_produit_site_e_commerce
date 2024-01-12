@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./pages/**/*.{html,tsx}', './components/**/*.{html,tsx}'],
+  mode: 'jit', // "just in time" gestion dynamique des classes de couleurs
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'header-border-color': '#E4E9F2',
+      },
+    },
   },
   plugins: [],
 };
