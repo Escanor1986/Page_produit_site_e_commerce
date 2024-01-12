@@ -14,9 +14,7 @@ function App() {
           onClick={() => {
             setShowModal(false);
           }}
-        >
-          {/* Vous pouvez également afficher un message comme "Cliquez pour fermer" ici */}
-        </div>
+        ></div>
       )}
     </>
   );
