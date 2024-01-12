@@ -24,11 +24,11 @@ export default function Modal({ onClose }: ModalProps) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [onClose]);
+  });
 
   return (
-    <div className="modal">
-      <div ref={modalRef}>I am a modal dialog</div>
+    <div className="modal" ref={modalRef}>
+      <div>I am a modal dialog</div>
       <button onClick={onClose}>Close</button>
     </div>
   );
