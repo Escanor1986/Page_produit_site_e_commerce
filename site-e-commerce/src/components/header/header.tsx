@@ -21,7 +21,7 @@ function Header() {
         <section className="flex flex-row">
           <ul className="flex flex-row space-x-10 items-center">
             <li className="cursor-pointer">
-              <div className="cart-nav-frame">
+              <div className="cart-nav-frame flex flex-row justify-end items-center">
                 <Portal />
               </div>
             </li>
