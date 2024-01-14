@@ -1,10 +1,14 @@
-import { useState } from 'react';
+// lazy shall bu used when cart content has to load for the first time (for now it's empty)
+import { useState, Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
-import Modal from '../Modal/Modal';
 import cart from '../../../../assets/cart.png';
+
+const Modal = lazy(() => import('../Modal/Modal'));
 
 export default function Portal() {
   const [showModal, setShowModal] = useState(false);
+  const wrapper: HTMLElement | null = document.querySelector('.cart-nav-frame');
+
   return (
     <>
       <img
@@ -13,11 +17,11 @@ export default function Portal() {
         src={cart}
         alt="cart"
       />
-      {showModal &&
-        createPortal(
-          <Modal onClose={() => setShowModal(false)} />,
-          document.body
-        )}
+      {showModal && wrapper && (
+        <Suspense fallback={<i className="fa-regular fa-spinner fa-spin"></i>}>
+          {createPortal(<Modal onClose={() => setShowModal(false)} />, wrapper)}
+        </Suspense>
+      )}
     </>
   );
 }
