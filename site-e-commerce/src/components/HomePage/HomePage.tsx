@@ -1,13 +1,15 @@
 import './HomePage.css';
+import ArticleComponent from './HomePage_Components/Articles/Articles';
+import articleList from '../../data/data';
 
 function HomePage() {
   return (
     <>
-      <main className="cart-wrapper flex flex-row bg-cyan-100">
-        {/* Left cart component to cut off */}
+      <main className="cart-wrapper flex flex-row">
         <div className="left-cart-content  bg-orange-400"></div>
-        {/* Right cart component to cut off */}
-        <div className="right-cart-content bg-green-400"></div>
+        <div className="right-cart-content">
+          <ArticleComponent data={articleList} />
+        </div>
       </main>
     </>
   );
