@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <>
-      <header className="pl-4 pr-4 min-h-32 border-b-2 border-b-header-border-color flex justify-between items-center">
+      <header className="pl-4 pr-4 border-b-2 border-b-header-border-color flex justify-between items-center">
         <section className="flex flex-row items-center">
           <h1 className="text-black text-3xl font-bold mr-12">sneakers</h1>
           <ul className="flex flex-row items-center space-x-10">{navItems}</ul>

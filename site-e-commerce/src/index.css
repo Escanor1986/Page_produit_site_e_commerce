@@ -4,7 +4,7 @@
 @import 'tailwindcss/utilities';
 
 body {
-  margin: 5rem 10rem 5rem 10rem;
-  min-height: 100vh;
-  overflow: auto;
+  margin: 0 6rem 0 6rem;
+  max-width: 1110px;
+  min-width: 815px;
 }

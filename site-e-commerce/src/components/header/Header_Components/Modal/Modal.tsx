@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './Modal.css';
 import { useRef, useEffect } from 'react';
 
 interface ModalProps {
@@ -24,14 +25,14 @@ export default function Modal({ onClose }: ModalProps) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  });
+  }, []); // Lors de la mise à jour du Cart, adapter le panier de dépendances
 
   return (
     <section
       className="modal z-10 static flex justify-end items-center"
       ref={modalRef}
     >
-      <div className="flex flex-col absolute w-96 h-64 bg-white top-48 right-16  m-0 border-transparent rounded-md shadow-2xl">
+      <div className="modal-wrapper flex flex-col absolute bg-white top-28 right-12  m-0 border-transparent rounded-md shadow-2xl">
         <div className="pl-4 pt-4 pb-5 border-b-2 border-b-header-border-color font-semibold flex flex-row items-start">
           Cart
         </div>
