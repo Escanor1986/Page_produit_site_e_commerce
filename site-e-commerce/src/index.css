@@ -5,6 +5,9 @@
 
 body {
   margin: 0 6rem 0 6rem;
-  max-width: 1110px;
+  max-width: 1440px;
   min-width: 815px;
+  max-height: 900px;
+  display: flex;
+  justify-content: center;
 }

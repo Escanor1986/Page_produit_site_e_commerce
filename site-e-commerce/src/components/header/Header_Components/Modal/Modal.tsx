@@ -32,7 +32,7 @@ export default function Modal({ onClose }: ModalProps) {
       className="modal z-10 static flex justify-end items-center"
       ref={modalRef}
     >
-      <div className="modal-wrapper flex flex-col absolute bg-white top-28 right-12  m-0 border-transparent rounded-md shadow-2xl">
+      <div className="modal-wrapper flex flex-col absolute bg-white top-44 right-80  m-0 border-transparent rounded-md shadow-2xl">
         <div className="pl-4 pt-4 pb-5 border-b-2 border-b-header-border-color font-semibold flex flex-row items-start">
           Cart
         </div>
