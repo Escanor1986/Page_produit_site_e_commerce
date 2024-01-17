@@ -27,17 +27,14 @@ jobs:
       - name: Running ls
         run: ls -al
 
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: "18"
-  #         cache: "npm"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+         with:
+          node-version: "18"
+          cache: "npm"
 
-  #     - name: Running ls
-  #       run: ls -la
-
-  #     - name: Install Dependencies
-  #       run: npm install
+      - name: Install Dependencies
+        run: npm install
 
   #     - name: Run Tests
   #       run: npm run test
