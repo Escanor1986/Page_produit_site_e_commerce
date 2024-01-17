@@ -18,13 +18,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          path: "site-e-commerce"
 
       - name: Running ls
-        run: cd site-e-commerce
-
-      - name: Running ls
-        run: ls -la
+        run: ls -al
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
