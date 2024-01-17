@@ -7,6 +7,10 @@ on:
     tags-ignore:
       - "*"
 
+defaults:
+  run:
+    working-directory: site-e-commerce
+
 permissions:
   contents: read
   pages: write
@@ -18,9 +22,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          path: site-e-commerce
+        uses: actions/checkout@v3
 
       - name: Running ls
         run: ls -al
