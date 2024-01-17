@@ -23,11 +23,17 @@ jobs:
       - name: Running ls
         run: cd site-e-commerce
 
+      - name: Running ls
+        run: ls -la
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "npm"
+
+      - name: Running ls
+        run: ls -la
 
       - name: Install Dependencies
         run: npm install
