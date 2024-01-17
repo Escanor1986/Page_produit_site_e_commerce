@@ -25,7 +25,7 @@ export default function Modal({ onClose }: ModalProps) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []); // Lors de la mise à jour du Cart, adapter le panier de dépendances
+  }, [onClose]); // Lors de la mise à jour du Cart, adapter le panier de dépendances
 
   return (
     <section

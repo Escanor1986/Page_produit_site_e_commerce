@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         'header-border-color': '#E4E9F2',
+        'cart-button-input': '#f6f8fd',
       },
     },
   },
