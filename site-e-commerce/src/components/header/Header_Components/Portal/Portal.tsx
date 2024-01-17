@@ -7,7 +7,7 @@ const Modal = lazy(() => import('../Modal/Modal'));
 
 export default function Portal() {
   const [showModal, setShowModal] = useState(false);
-  const wrapper: HTMLElement | null = document.querySelector('.cart-nav-frame');
+  const wrapper = document.querySelector('.cart-nav-frame');
 
   return (
     <>

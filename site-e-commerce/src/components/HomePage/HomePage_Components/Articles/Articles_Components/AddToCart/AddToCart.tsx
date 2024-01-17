@@ -16,6 +16,10 @@ const AddToCart: React.FC<AddToCartProps> = ({ number }) => {
     setArticleNumber(nbr => nbr + 1);
   };
 
+  console.log('test');
+  console.log('test');
+  console.log('test');
+
   return (
     <>
       <section>
