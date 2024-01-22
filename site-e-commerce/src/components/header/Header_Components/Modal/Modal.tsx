@@ -29,10 +29,10 @@ export default function Modal({ onClose }: ModalProps) {
 
   return (
     <section
-      className="modal z-10 static flex justify-end items-center"
+      className="modal absolute top-44 right-24 z-10 flex justify-end items-center"
       ref={modalRef}
     >
-      <div className="modal-wrapper flex flex-col absolute bg-white top-44 right-80  m-0 border-transparent rounded-md shadow-2xl">
+      <div className="modal-wrapper flex flex-col bg-white m-0 border-transparent rounded-md shadow-2xl">
         <div className="pl-4 pt-4 pb-5 border-b-2 border-b-header-border-color font-semibold flex flex-row items-start">
           Cart
         </div>

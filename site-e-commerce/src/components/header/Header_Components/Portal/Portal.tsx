@@ -7,7 +7,7 @@ const Modal = lazy(() => import('../Modal/Modal'));
 
 export default function Portal() {
   const [showModal, setShowModal] = useState(false);
-  const wrapper = document.querySelector('.cart-nav-frame');
+  // const wrapper = document.querySelector('.cart-nav-frame');
 
   return (
     <>
@@ -17,9 +17,12 @@ export default function Portal() {
         src={cart}
         alt="cart"
       />
-      {showModal && wrapper && (
+      {showModal && (
         <Suspense fallback={<i className="fa-regular fa-spinner fa-spin"></i>}>
-          {createPortal(<Modal onClose={() => setShowModal(false)} />, wrapper)}
+          {createPortal(
+            <Modal onClose={() => setShowModal(false)} />,
+            document.body
+          )}
         </Suspense>
       )}
     </>

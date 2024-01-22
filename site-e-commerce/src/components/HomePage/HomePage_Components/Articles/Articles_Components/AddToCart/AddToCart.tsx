@@ -6,6 +6,7 @@ interface AddToCartProps {
 }
 
 const AddToCart: React.FC<AddToCartProps> = ({ number }) => {
+  // utiliser useRef
   const [articleNumber, setArticleNumber] = useState(number);
 
   const handleMinusClick = () => {

@@ -48,3 +48,65 @@ const recursiveBinarySearch = (array, target, start, end) => {
 };
 
 console.log(recursiveBinarySearch(array, target, 0, array.length - 1));
+
+let voiture = {
+  marque: "Toyota",
+  modele: "Corolla",
+  annee: 2021,
+  afficherInfo: function () {
+    return `${this.marque} ${this.modele} (${this.annee})`;
+  },
+};
+
+console.log(voiture.afficherInfo());
+
+// Ajout d'une nouvelle prorpiété
+voiture.couleur = "fushia";
+
+// modification d'une propriété existante
+voiture.annee = 2022;
+
+// Suppression d'une propriété
+delete voiture.modele;
+
+// accéder à une propriété de l'objet
+console.log(voiture.marque);
+
+let bibliotheque = [
+  { titre: "Le Petit Prince", auteur: "Antoine de Saint-Exupéry", pages: 96 },
+  { titre: "1984", auteur: "George Orwell", pages: 328 },
+  { titre: "Le Meilleur des mondes", auteur: "Aldous Huxley", pages: 254 },
+];
+
+// Ajouter un nouveau livre à la fin du tableau (car au début cela
+// impliquerait de déplacer tous les index et donc nécessite plus de mémoire)
+bibliotheque.push({ titre: "Dune", auteur: "Frank Herbert", pages: 600 });
+
+// Afficher deux propriétés des objets contenue dans le tableau
+console.log(
+  bibliotheque.map(elem => {
+    return elem.titre + "  de  " + elem.auteur;
+  })
+);
+
+// Recher un livre son titre et retourner l'objet dont question
+const getBook = bibliotheque.filter((elem, index) => {
+  if (elem.titre === "Le Petit Prince") {
+    return bibliotheque;
+  }
+});
+
+console.log(getBook);
+
+// Afficher le titre et l'auteur de chaque livre
+bibliotheque.forEach(livre => {
+  console.log(`${livre.titre} de ${livre.auteur}`);
+});
+
+// Rechercher un livre par son titre
+function trouverLivreParTitre(titre) {
+  return bibliotheque.find(livre => livre.titre === titre);
+}
+
+const livreRecherche = trouverLivreParTitre("Le Petit Prince");
+console.log(livreRecherche);

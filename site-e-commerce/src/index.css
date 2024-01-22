@@ -8,6 +8,20 @@ body {
   max-width: 1440px;
   min-width: 815px;
   max-height: 900px;
+  position: relative;
   display: flex;
   justify-content: center;
 }
+
+/* body {
+  margin: 0 6rem 0 6rem;
+  max-width: 1440px;
+  min-width: 815px;
+  max-height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
+} */

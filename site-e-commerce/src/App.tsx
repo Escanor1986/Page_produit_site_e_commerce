@@ -7,7 +7,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="min-h-dvh flex flex-col justify-center content-center ">
+    <div className="min-h-dvh max-h-dvh flex flex-col justify-center content-center ">
       <Header />
       <HomePage />
       {showModal && (
