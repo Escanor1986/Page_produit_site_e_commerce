@@ -25,34 +25,34 @@ Pour utiliser ce projet, vous devez avoir installé :
 
 1. Clonez le dépôt :
 
-   git clone https://github.com/Escanor1986/Page_produit_site_e_commerce
-   cd site-e-commerce
+   - git clone https://github.com/Escanor1986/Page_produit_site_e_commerce
+   - cd site-e-commerce
 
 2. Installez les dépendances :
 
-   npm install
+- npm install
 
 ## Usage
 
 ### Pour démarrer le serveur de développement :
 
-npm run dev
+- npm run dev
 
 ### Pour construire la version de production :
 
-npm run build
+- npm run build
 
 ### Pour exécuter les tests :
 
-npm run test
+- npm run test
 
 ### Pour lancer ESLint :
 
-npm run lint
+- npm run lint
 
 ## Docker
 
 Pour construire et exécuter l'application dans un conteneur Docker :
 
-docker build -t site-e-commerce .
-docker run -p 3000:3000 site-e-commerce
+- docker build -t site-e-commerce .
+- docker run -p 3000:3000 site-e-commerce
