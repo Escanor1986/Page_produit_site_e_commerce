@@ -1,5 +1,6 @@
 export interface Article {
   id: number;
+  numberOfArticle: number;
   company: string;
   name: string;
   description: string;
@@ -8,9 +9,14 @@ export interface Article {
   images: string[];
 }
 
+export type ArticleContextType = {
+  articles: Article[];
+};
+
 const articleList: Article[] = [
   {
     id: 1,
+    numberOfArticle: 0,
     company: 'Sneaker Company',
     name: 'Fall Limited Edition Sneakers',
     description:
@@ -27,6 +33,7 @@ const articleList: Article[] = [
   },
   {
     id: 2,
+    numberOfArticle: 0,
     company: 'Sneaker Company',
     name: 'Winter Classic Boots',
     description:
@@ -43,6 +50,7 @@ const articleList: Article[] = [
   },
   {
     id: 3,
+    numberOfArticle: 0,
     company: 'Sneaker Company',
     name: 'Athletic Performance Cleats',
     description:
@@ -59,6 +67,7 @@ const articleList: Article[] = [
   },
   {
     id: 4,
+    numberOfArticle: 0,
     company: 'Sneaker Company',
     name: 'Elegant Ballet Flats',
     description:
@@ -75,6 +84,7 @@ const articleList: Article[] = [
   },
   {
     id: 5,
+    numberOfArticle: 0,
     company: 'Sneaker Company',
     name: 'Skateboarding Pro Sneakers',
     description:
