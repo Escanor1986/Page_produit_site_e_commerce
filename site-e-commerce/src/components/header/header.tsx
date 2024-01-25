@@ -6,7 +6,7 @@ import { useContext } from 'react';
 
 const navList: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
-function Header() {
+export const Header = () => {
   const navItems = navList.map((item, index) => (
     <li className="li-header" key={index}>
       {item}
@@ -59,6 +59,4 @@ function Header() {
       </header>
     </>
   );
-}
-
-export default Header;
+};
