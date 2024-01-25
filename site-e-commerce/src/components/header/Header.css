@@ -1,7 +1,8 @@
 .li-header {
-  @apply text-black/60 border-b-4 pt-12 pb-12 border-double border-transparent hover:text-orange-500 hover:border-orange-500 transition duration-300 cursor-pointer;
+  @apply text-black/60 dark:text-white border-b-4 pt-12 pb-12 border-double border-transparent hover:text-orange-500 hover:border-orange-500 transition duration-300 cursor-pointer;
 }
 
 header {
   min-height: 12dvh;
+  min-width: 1200px;
 }

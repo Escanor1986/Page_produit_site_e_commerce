@@ -11,12 +11,10 @@ export default function Portal() {
 
   return (
     <>
-      <img
+      <i
         onClick={() => setShowModal(true)}
-        className="cart-nav w-6 h-6 hover:scale-110 transition duration-300"
-        src={cart}
-        alt="cart"
-      />
+        className="fa-solid fa-cart-shopping dark:text-white cart-nav text-2xl hover:scale-110 transition duration-300"
+      ></i>
       {showModal && (
         <Suspense fallback={<i className="fa-regular fa-spinner fa-spin"></i>}>
           {createPortal(

@@ -3,25 +3,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body {
-  margin: 0 6rem 0 6rem;
-  max-width: 1440px;
-  min-width: 815px;
-  max-height: 900px;
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
   position: relative;
-  display: flex;
-  justify-content: center;
 }
-
-/* body {
-  margin: 0 6rem 0 6rem;
-  max-width: 1440px;
-  min-width: 815px;
-  max-height: 900px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-content: stretch;
-  align-items: stretch;
-} */

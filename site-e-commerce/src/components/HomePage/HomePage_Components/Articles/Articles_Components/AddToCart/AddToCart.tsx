@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './AddToCart.css';
+import { useArticleContext } from '../../../../../../contexts/useArticleContext'; // Ajustez le chemin selon votre structure de dossier
 
-interface AddToCartProps {
-  number: number;
-}
+const AddToCart: React.FC = () => {
+  const { articles, setNumber } = useArticleContext();
 
-const AddToCart: React.FC<AddToCartProps> = ({ number }) => {
-  // utiliser useRef
-  const [articleNumber, setArticleNumber] = useState(number);
+  const article = articles.find(article => article.id === 0);
+  const articleNumber = article ? article.numberOfArticle : 0;
 
   const handleMinusClick = () => {
-    setArticleNumber(nbr => nbr - 1);
+    if (articleNumber > 0) {
+      setNumber(0, articleNumber - 1);
+    }
   };
 
   const handlePlusClick = () => {
-    setArticleNumber(nbr => nbr + 1);
+    setNumber(0, articleNumber + 1);
   };
 
-  console.log('test');
-  console.log('test');
-  console.log('test');
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseInt(event.target.value, 10);
+    if (!isNaN(newValue) && newValue >= 0) {
+      setNumber(0, newValue);
+    }
+  };
 
   return (
     <>
@@ -37,6 +41,7 @@ const AddToCart: React.FC<AddToCartProps> = ({ number }) => {
               type="text"
               placeholder="0"
               value={articleNumber}
+              onChange={handleChange}
             ></input>
             <button
               className="plus-button pl-3 pr-3 text-xl font-semibold cursor-pointer bg-transparent text-orange-400 hover:text-orange-300 border-transparent border-0"

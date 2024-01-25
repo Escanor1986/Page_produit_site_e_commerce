@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   mode: 'jit', // "just in time" gestion dynamique des classes de couleurs
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {

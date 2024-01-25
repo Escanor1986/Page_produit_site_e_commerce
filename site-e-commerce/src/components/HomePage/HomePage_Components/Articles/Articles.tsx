@@ -3,6 +3,7 @@ import './Articles.css';
 import { Article } from '../../../../data/data';
 import Prices from './Articles_Components/Prices/Prices';
 import AddToCart from './Articles_Components/AddToCart/AddToCart';
+import { useArticleContext } from '../../../../contexts/useArticleContext';
 
 interface ArticleProps {
   data: Article[];
@@ -20,10 +21,14 @@ const ArticleComponent: React.FC<ArticleProps> = ({ data }) => {
       <h1 className="pb-4 text-lg text-orange-500 font-medium">
         {firstArticle.company.toLocaleUpperCase()}
       </h1>
-      <p className="pb-8 font-semibold text-5xl">{firstArticle.name}</p>
-      <p className="pb-6 text-black/50">{firstArticle.description}</p>
+      <p className="pb-8 dark:text-white font-semibold text-5xl">
+        {firstArticle.name}
+      </p>
+      <p className="pb-6 text-black/50 dark:text-white">
+        {firstArticle.description}
+      </p>
       <Prices price={firstArticle.price} promo={firstArticle.promo} />
-      <AddToCart number={0} /> {/* number = input Value */}
+      <AddToCart />
     </div>
   );
 };

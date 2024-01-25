@@ -9,11 +9,7 @@ export interface Article {
   images: string[];
 }
 
-export type ArticleContextType = {
-  articles: Article[];
-};
-
-const articleList: Article[] = [
+const ArticleList: Article[] = [
   {
     id: 1,
     numberOfArticle: 0,
@@ -101,4 +97,4 @@ const articleList: Article[] = [
   },
 ];
 
-export default articleList;
+export default ArticleList;
