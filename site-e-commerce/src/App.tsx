@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react';
-import { ArticleProvider } from './contexts/ArticleProvider';
-import Header from './components/Header/Header';
-import HomePage from './components/HomePage/HomePage';
+import { ArticleProvider } from './Contexts/ArticleProvider';
+import Header from './Components/Header/Header';
+import HomePage from './Components/HomePage/HomePage';
 
 function App() {
   const [showModal, setShowModal] = useState(false);

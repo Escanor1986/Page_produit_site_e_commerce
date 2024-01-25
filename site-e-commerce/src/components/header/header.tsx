@@ -1,7 +1,7 @@
 import './Header.css';
 import profilLogo from '../../assets/pictureAvatarReduceSize.png';
 import Portal from './Header_Components/Portal/Portal';
-import { ThemeContext } from '../../contexts/ThemeProvider';
+import { ThemeContext } from '../../Contexts/ThemeProvider';
 import { useContext } from 'react';
 
 const navList: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact'];

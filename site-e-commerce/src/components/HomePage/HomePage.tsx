@@ -1,6 +1,6 @@
 import './HomePage.css';
 import ArticleComponent from './HomePage_Components/Articles/Articles';
-import articleList from '../../data/data';
+import articleList from '../../Data/data';
 
 function HomePage() {
   return (
