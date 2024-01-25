@@ -3,7 +3,7 @@ import './Articles.css';
 import { Article } from '../../../../data/data';
 import Prices from './Articles_Components/Prices/Prices';
 import AddToCart from './Articles_Components/AddToCart/AddToCart';
-import { useArticleContext } from '../../../../contexts/useArticleContext';
+// import { useArticleContext } from '../../../../contexts/useArticleContext';
 
 interface ArticleProps {
   data: Article[];

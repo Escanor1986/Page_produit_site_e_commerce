@@ -1,7 +1,6 @@
 // lazy shall bu used when cart content has to load for the first time (for now it's empty)
 import { useState, Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
-import cart from '../../../../assets/cart.png';
 
 const Modal = lazy(() => import('../Modal/Modal'));
 
