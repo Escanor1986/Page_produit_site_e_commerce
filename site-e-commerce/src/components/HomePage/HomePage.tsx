@@ -2,7 +2,7 @@ import './HomePage.css';
 import ArticleComponent from './HomePage_Components/Articles/Articles';
 import articleList from '../../data/data';
 
-export const HomePage = () => {
+function HomePage() {
   return (
     <>
       <main className="cart-wrapper flex flex-row">
@@ -13,4 +13,6 @@ export const HomePage = () => {
       </main>
     </>
   );
-};
+}
+
+export default HomePage;
