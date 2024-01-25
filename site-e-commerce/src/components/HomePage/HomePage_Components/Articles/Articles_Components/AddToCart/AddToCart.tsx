@@ -1,6 +1,6 @@
 import React from 'react';
 import './AddToCart.css';
-import { useArticleContext } from '../../../../../../Contexts/useArticleContext'; // Ajustez le chemin selon votre structure de dossier
+import { useArticleContext } from '../../../../../../contexts/useArticleContext'; // Ajustez le chemin selon votre structure de dossier
 
 const AddToCart: React.FC = () => {
   const { articles, setNumber } = useArticleContext();

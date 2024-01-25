@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode } from 'react';
-import { Article } from '../Data/data';
-import ArticleList from '../Data/data';
+import { Article } from '../data/data';
+import ArticleList from '../data/data';
 
 export interface ArticleContextType {
   articles: Article[];

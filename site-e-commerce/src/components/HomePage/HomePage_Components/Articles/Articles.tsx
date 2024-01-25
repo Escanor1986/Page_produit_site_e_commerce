@@ -1,6 +1,6 @@
 import React from 'react';
 import './Articles.css';
-import { Article } from '../../../../Data/data';
+import { Article } from '../../../../data/data';
 import Prices from './Articles_Components/Prices/Prices';
 import AddToCart from './Articles_Components/AddToCart/AddToCart';
 // import { useArticleContext } from '../../../../contexts/useArticleContext';

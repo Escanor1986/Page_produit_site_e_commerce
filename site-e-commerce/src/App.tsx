@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { ArticleProvider } from './Contexts/ArticleProvider';
+import { ArticleProvider } from './contexts/ArticleProvider';
 import Header from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';
 
