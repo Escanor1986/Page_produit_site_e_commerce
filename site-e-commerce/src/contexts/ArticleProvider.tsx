@@ -21,14 +21,18 @@ export const ArticleProvider: React.FC<ArticleProviderProps> = ({
 }) => {
   const [articles, setArticles] = useState<Article[]>(ArticleList);
 
-  const setNumber = (articleId: number = 0, nbr: number) => {
-    setArticles(currentArticles =>
-      currentArticles.map(article =>
-        article.id === articleId
-          ? { ...article, numberOfArticle: nbr }
-          : article
-      )
-    );
+  const setNumber = (articleId: number, nbr: number) => {
+    setArticles(currentArticles => {
+      return currentArticles.map(article => {
+        if (article.id === articleId) {
+          console.log(`test setArticles current id: ${article.id}`);
+          return { ...article, numberOfArticle: nbr };
+        } else {
+          console.log(`test setArticles others id: ${article.id}`);
+          return article;
+        }
+      });
+    });
   };
 
   return (

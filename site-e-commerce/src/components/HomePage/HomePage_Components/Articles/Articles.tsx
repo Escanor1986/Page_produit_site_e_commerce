@@ -28,7 +28,7 @@ const ArticleComponent: React.FC<ArticleProps> = ({ data }) => {
         {firstArticle.description}
       </p>
       <Prices price={firstArticle.price} promo={firstArticle.promo} />
-      <AddToCart />
+      <AddToCart articleId={firstArticle.id} />
     </div>
   );
 };

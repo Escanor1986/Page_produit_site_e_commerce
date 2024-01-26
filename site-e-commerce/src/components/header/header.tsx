@@ -1,8 +1,7 @@
 import './Header.css';
 import profilLogo from '../../assets/pictureAvatarReduceSize.png';
 import Portal from './Header_Components/Portal/Portal';
-import { ThemeContext } from '../../contexts/ThemeProvider';
-import { useContext } from 'react';
+import { useThemeContext } from '../../contexts/useThemeContext';
 
 const navList: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
@@ -13,7 +12,7 @@ function Header() {
     </li>
   ));
 
-  const { toggleTheme, darkMode } = useContext(ThemeContext);
+  const { toggleTheme, darkMode } = useThemeContext();
 
   return (
     <>

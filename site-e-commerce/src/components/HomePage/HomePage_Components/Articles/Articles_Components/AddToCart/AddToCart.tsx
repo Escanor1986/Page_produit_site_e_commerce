@@ -1,21 +1,23 @@
 import React from 'react';
 import './AddToCart.css';
-import { useArticleContext } from '../../../../../../contexts/useArticleContext'; // Ajustez le chemin selon votre structure de dossier
+import { useArticleContext } from '../../../../../../contexts/useArticleContext';
 
-const AddToCart: React.FC = () => {
+const AddToCart: React.FC<{ articleId: number }> = ({ articleId }) => {
   const { articles, setNumber } = useArticleContext();
 
-  const article = articles.find(article => article.id === 0);
+  const article = articles.find(article => article.id === articleId);
   const articleNumber = article ? article.numberOfArticle : 0;
 
   const handleMinusClick = () => {
     if (articleNumber > 0) {
-      setNumber(0, articleNumber - 1);
+      console.log('Minus');
+      setNumber(articleId, articleNumber - 1);
     }
   };
 
   const handlePlusClick = () => {
-    setNumber(0, articleNumber + 1);
+    console.log('Plus');
+    setNumber(articleId, articleNumber + 1);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
