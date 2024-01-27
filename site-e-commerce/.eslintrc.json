@@ -8,11 +8,19 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
   ],
-  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.cjs"
+  ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "react-hooks", "react-refresh"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-refresh"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -22,7 +30,9 @@
     "react/react-in-jsx-scope": "off",
     "react-refresh/only-export-components": [
       "warn",
-      { "allowConstantExport": true }
+      {
+        "allowConstantExport": true
+      }
     ]
   }
 }
