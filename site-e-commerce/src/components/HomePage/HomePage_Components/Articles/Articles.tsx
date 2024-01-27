@@ -1,16 +1,12 @@
 import React from 'react';
 import './Articles.css';
-import { Article } from '../../../../data/data';
 import Prices from './Articles_Components/Prices/Prices';
 import AddToCart from './Articles_Components/AddToCart/AddToCart';
-// import { useArticleContext } from '../../../../contexts/useArticleContext';
+import { useArticleContext } from '../../../../contexts/useArticleContext';
 
-interface ArticleProps {
-  data: Article[];
-}
-
-const ArticleComponent: React.FC<ArticleProps> = ({ data }) => {
-  const firstArticle = data[0];
+const ArticleComponent: React.FC = () => {
+  const { articles } = useArticleContext();
+  const firstArticle = articles[0];
 
   if (!firstArticle) {
     return <div>Aucun article trouvé</div>;

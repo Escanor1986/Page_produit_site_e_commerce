@@ -1,4 +1,8 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vite React",
+  "_version": "3.0.0",
+
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
