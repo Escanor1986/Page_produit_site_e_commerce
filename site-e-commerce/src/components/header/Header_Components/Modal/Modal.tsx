@@ -72,12 +72,12 @@ export default function Modal({ onClose }: ModalProps) {
                   </span>
                 </div>
               </div>
-              <i className="fa-solid fa-trash w-5 h-5 text-black/45 hover:scale-110 hover:text-black/60 transition duration-300"></i>
+              <i
+                onClick={handleClickTrashBin}
+                className="fa-solid fa-trash cursor-pointer w-5 h-5 text-black/45 hover:scale-110 hover:text-black/60 transition duration-300"
+              ></i>
             </div>
-            <button
-              onClick={handleClickTrashBin}
-              className="min-h-14 cursor-pointer rounded-lg text-white text-lg bg-orange-500 text-center"
-            >
+            <button className="min-h-14 cursor-pointer rounded-lg text-white text-lg bg-orange-500 text-center">
               Checkout
             </button>
           </section>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddToCart.css';
 import { useArticleContext } from '../../../../../../contexts/useArticleContext';
 
@@ -8,23 +8,27 @@ const AddToCart: React.FC<{ articleId: number }> = ({ articleId }) => {
   const article = articles.find(article => article.id === articleId);
   const articleNumber = article ? article.numberOfArticle : 0;
 
+  const [inputNumber, setInputNumber] = useState(articleNumber);
+
   const handleMinusClick = () => {
-    if (articleNumber > 0) {
-      console.log('Minus');
-      setNumber(articleId, articleNumber - 1);
+    if (inputNumber > 0) {
+      setInputNumber(inputNumber - 1);
     }
   };
 
   const handlePlusClick = () => {
-    console.log('Plus');
-    setNumber(articleId, articleNumber + 1);
+    setInputNumber(inputNumber + 1);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseInt(event.target.value, 10);
     if (!isNaN(newValue) && newValue >= 0) {
-      setNumber(0, newValue);
+      setInputNumber(newValue);
     }
+  };
+
+  const handleAddToCartClick = () => {
+    setNumber(articleId, inputNumber);
   };
 
   return (
@@ -42,7 +46,7 @@ const AddToCart: React.FC<{ articleId: number }> = ({ articleId }) => {
               className="w-1/3 font-bold cart-input bg-transparent border-transparent border-0 text-center"
               type="text"
               placeholder="0"
-              value={articleNumber}
+              value={inputNumber}
               onChange={handleChange}
             ></input>
             <button
@@ -52,10 +56,13 @@ const AddToCart: React.FC<{ articleId: number }> = ({ articleId }) => {
               +
             </button>
           </div>
-          <div className="w-4/6 ml-2 pb-3 pt-3 cursor-pointer add-to-cart-input flex flex-grow items-center justify-center rounded-lg bg-orange-400 hover:bg-orange-300">
+          <button
+            onClick={handleAddToCartClick}
+            className="add-to-cart-button w-4/6 ml-2 pb-3 pt-3 cursor-pointer add-to-cart-input flex flex-grow items-center justify-center rounded-lg bg-orange-400 hover:bg-orange-300"
+          >
             <i className="pr-4 fa-solid fa-cart-shopping text-white"></i>
             <p className="text-white">Add to cart</p>
-          </div>
+          </button>
         </div>
       </section>
     </>
