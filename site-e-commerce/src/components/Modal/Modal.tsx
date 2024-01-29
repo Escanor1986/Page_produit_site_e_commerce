@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import articlePicture from '../../../../assets/sneakers_1.webp';
+import articlePicture from '../../assets/sneakers_1.webp';
 import { useRef, useEffect } from 'react';
 import { useArticleContext } from '../../contexts/useArticleContext';
 

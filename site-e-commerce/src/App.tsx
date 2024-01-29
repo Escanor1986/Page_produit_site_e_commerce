@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ArticleProvider } from './contexts/ArticleProvider';
 import Header from './Components/Header/Header';
 import HomePage from './pages/Product';
 
@@ -8,18 +7,16 @@ function App() {
 
   return (
     <div className="dark:bg-slate-700 min-h-screen min-w-full flex flex-col justify-center items-center ">
-      <ArticleProvider>
-        <Header />
-        <HomePage />
-        {showModal && (
-          <div
-            className="modal-overlay"
-            onClick={() => {
-              setShowModal(false);
-            }}
-          ></div>
-        )}
-      </ArticleProvider>
+      <Header />
+      <HomePage />
+      {showModal && (
+        <div
+          className="modal-overlay"
+          onClick={() => {
+            setShowModal(false);
+          }}
+        ></div>
+      )}
     </div>
   );
 }
