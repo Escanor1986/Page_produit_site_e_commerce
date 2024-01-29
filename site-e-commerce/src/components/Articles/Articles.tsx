@@ -1,8 +1,7 @@
 import React from 'react';
-import './Articles.css';
-import Prices from './Articles_Components/Prices/Prices';
-import AddToCart from './Articles_Components/AddToCart/AddToCart';
-import { useArticleContext } from '../../../../contexts/useArticleContext';
+import Prices from '../Prices/Prices';
+import AddToCart from '../AddToCart/AddToCart';
+import { useArticleContext } from '../../contexts/useArticleContext';
 
 const ArticleComponent: React.FC = () => {
   const { articles } = useArticleContext();

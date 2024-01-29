@@ -10,3 +10,46 @@ html,
   padding: 0;
   position: relative;
 }
+
+/* Header  */
+
+.li-header {
+  @apply text-black/60 dark:text-white border-b-4 pt-12 pb-12 border-double border-transparent hover:text-orange-500 hover:border-orange-500 transition duration-300 cursor-pointer;
+}
+
+header {
+  min-height: 12dvh;
+  min-width: 1200px;
+}
+
+/* Product description */
+
+.cart-wrapper {
+  min-height: 565px;
+  max-height: 565px;
+  min-width: 719px;
+  max-width: 1015px;
+  margin: 5rem 3rem 5rem 3rem;
+}
+
+.left-cart-content {
+  min-width: 50%;
+  min-height: 100%;
+}
+
+.right-cart-content {
+  min-width: 50%;
+  min-height: 100%;
+}
+
+.article-promo {
+  max-height: 27px;
+  min-width: 51px;
+}
+
+/* Modal size */
+
+.modal-wrapper {
+  width: 360px;
+  height: 256px;
+}

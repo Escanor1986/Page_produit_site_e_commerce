@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import './Modal.css';
 import articlePicture from '../../../../assets/sneakers_1.webp';
 import { useRef, useEffect } from 'react';
-import { useArticleContext } from '../../../../contexts/useArticleContext';
+import { useArticleContext } from '../../contexts/useArticleContext';
 
 interface ModalProps {
   onClose: () => void;

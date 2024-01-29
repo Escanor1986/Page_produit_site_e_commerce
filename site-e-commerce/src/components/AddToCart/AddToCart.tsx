@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './AddToCart.css';
-import { useArticleContext } from '../../../../../../contexts/useArticleContext';
+import { useArticleContext } from '../../contexts/useArticleContext';
 
 const AddToCart: React.FC<{ articleId: number }> = ({ articleId }) => {
   const { articles, setNumber } = useArticleContext();
