@@ -2,7 +2,11 @@
 
 ## Description
 
-Ce projet est un site e-commerce développé avec React, TypeScript, et TailwindCSS, et construit avec Vite. Il utilise Docker pour la conteneurisation, intégrant des outils de CI/CD, de linting (ESLint) et de formatage de code (Prettier).
+### Ce projet est un site e-commerce développé :
+
+- Pour la partie front avec React, React Router, TypeScript, et TailwindCSS, et construit avec Vite. Il utilise Docker pour la conteneurisation, intégrant des outils de CI/CD, de linting (ESLint) et de formatage de code (Prettier).
+
+- Pour la partie Back avec une api Rest construite from scratch avec Nodejs, JavaScript et le framework express pour servir les données nécessaire côté client.
 
 ## Fonctionnalités
 
@@ -21,7 +25,7 @@ Pour utiliser ce projet, vous devez avoir installé :
 - npm (version recommandée: 8.x.x)
 - Docker (pour la conteneurisation et le déploiement)
 
-## Installation
+## Installation du Front :
 
 1. Clonez le dépôt :
 
@@ -49,6 +53,26 @@ Pour utiliser ce projet, vous devez avoir installé :
 ### Pour lancer ESLint :
 
 - npm run lint
+
+## Installation du back :
+
+1. Accéder au dossier du Back :
+
+   - cd api
+
+2. Installez les dépendances :
+
+   - npm install
+
+## Usage :
+
+### Pour démarrer le serveur de développement (nodemon) :
+
+- npm run devstart (Listening on port 8000)
+
+### Pour démarrer le server node :
+
+- npm run start (ou) npm start
 
 ## Docker
 
