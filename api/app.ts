@@ -1,10 +1,10 @@
-const createError = require("http-errors");
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const app = express();
+import createError from "http-errors";
+import express, { Request, Response, NextFunction, Express } from "express";
+import path from "path";
+import cookieParser from "cookie-parser";
+import cors from "cors";
 
-const cors = require("cors");
+const app: Express = express();
 
 app.use(cors());
 // view engine setup
@@ -15,17 +15,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(function (req, res, next) {
+app.use(function (req: Request, res: Response, next: NextFunction) {
   setTimeout(next, Math.floor(Math.random() * 2000 + 100));
 });
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (req: Request, res: Response, next: NextFunction) {
   next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
@@ -35,4 +35,4 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-module.exports = app;
+export default app;
