@@ -4,8 +4,9 @@
   "description": "api site-e-commerce",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "devstart": "nodemon ./index.js"
+    "start": "node ./dist/index.js",
+    "devstart": "nodemon ./dist/index.js",
+    "tsc": "npx tsc"
   },
   "author": "Lion",
   "license": "ISC",

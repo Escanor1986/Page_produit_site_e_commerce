@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "./*.ts",
+    "./routes/**/*.ts",
+    "./models/**/*.ts",
+    "./controllers/**/*.ts",
+    "./public/**/*.ts"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
