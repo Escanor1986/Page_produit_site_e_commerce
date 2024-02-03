@@ -3,7 +3,7 @@ import image2 from '../../assets/sneakers_2.webp';
 import image3 from '../../assets/sneakers_3.webp';
 import image4 from '../../assets/sneakers_4.webp';
 
-export const Carousel = () => {
+const Carousel = () => {
   const images = [image1, image2, image3, image4];
 
   const navImages = images.map((item, index) => (
@@ -30,3 +30,5 @@ export const Carousel = () => {
     </>
   );
 };
+
+export default Carousel;
