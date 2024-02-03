@@ -33,7 +33,7 @@ export default function Modal({ onClose }: ModalProps) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [onClose]);
 
   return (
     <section
