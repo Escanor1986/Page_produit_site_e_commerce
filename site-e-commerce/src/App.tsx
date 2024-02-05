@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div className="dark:bg-slate-700 min-h-screen min-w-full flex flex-col justify-center items-center ">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />

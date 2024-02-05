@@ -2,7 +2,7 @@ import Portal from '../utils/usePortal';
 
 function CartIndicator() {
   return (
-    <div className="cart-nav-frame relative">
+    <div className="cart-nav- cursor-pointer relative">
       <Portal />
     </div>
   );

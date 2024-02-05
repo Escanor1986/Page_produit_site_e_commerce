@@ -52,3 +52,55 @@ header {
   width: 360px;
   height: 256px;
 }
+
+/* Error page */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff6f61;
+  min-height: 100vh;
+}
+
+.error-title {
+  font-size: 3rem;
+  color: #e91e63;
+  animation: bounce 1s infinite;
+}
+
+.error-message {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.return-home {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.home-link {
+  margin-top: 2rem;
+  animation: spin 2s infinite linear;
+}
+
+.home-logo {
+  border-radius: 50%;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
