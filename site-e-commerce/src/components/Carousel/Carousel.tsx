@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import image1 from '../../assets/sneakers_1.webp';
 import image2 from '../../assets/sneakers_2.webp';
 import image3 from '../../assets/sneakers_3.webp';
@@ -6,12 +7,19 @@ import image4 from '../../assets/sneakers_4.webp';
 const Carousel = () => {
   const images = [image1, image2, image3, image4];
 
+  const [currentImage, setCurrentImage] = useState(images[0]);
+
+  const handleImageClick = (image: string) => {
+    setCurrentImage(image);
+  };
+
   const navImages = images.map((item, index) => (
     <img
       src={item}
       key={index}
-      alt="Petite Image"
-      className="rounded-xl w-full"
+      alt={`Petite Image ${index + 1}`}
+      className="rounded-xl w-full cursor-pointer"
+      onClick={() => handleImageClick(item)}
     />
   ));
 
@@ -20,7 +28,7 @@ const Carousel = () => {
       <div className="grid gap-4">
         <div className="row-span-1">
           <img
-            src={images[0]}
+            src={currentImage}
             alt="Grande Image"
             className="rounded-xl w-full"
           />

@@ -2,7 +2,7 @@
 import { useState, Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
 
-const Modal = lazy(() => import('../Modal/Modal'));
+const Modal = lazy(() => import('../components/Modal/Modal'));
 
 export default function Portal() {
   const [showModal, setShowModal] = useState(false);

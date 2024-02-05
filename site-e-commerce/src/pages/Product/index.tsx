@@ -4,7 +4,7 @@ import ProductCard from '../../components/ProductDescription';
 import AddToCart from '../../components/AddToCart';
 import { useArticleContext } from '../../contexts/useArticleContext';
 
-const Image = lazy(() => import('../../components/Carousel/Carousel'));
+const Carousel = lazy(() => import('../../components/Carousel/Carousel'));
 
 function HomePage() {
   const { articles } = useArticleContext();
@@ -21,7 +21,7 @@ function HomePage() {
           <Suspense
             fallback={<i className="fa-regular fa-spinner fa-spin"></i>}
           >
-            <Image />
+            <Carousel />
           </Suspense>
         </div>
         <div className="right-cart-content p-12 flex flex-col justify-between">
