@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
+import { createPortal } from 'react-dom';
+
+const ImageModal = lazy(() => import('../../modals/CarouselModal'));
+
 import image1 from '../../assets/sneakers_1.webp';
 import image2 from '../../assets/sneakers_2.webp';
 import image3 from '../../assets/sneakers_3.webp';
@@ -8,9 +12,11 @@ const Carousel = () => {
   const images = [image1, image2, image3, image4];
 
   const [currentImage, setCurrentImage] = useState(images[0]);
+  const [showModal, setShowModal] = useState(false);
 
   const handleImageClick = (image: string) => {
     setCurrentImage(image);
+    setShowModal(true);
   };
 
   const navImages = images.map((item, index) => (
@@ -31,10 +37,22 @@ const Carousel = () => {
             src={currentImage}
             alt="Grande Image"
             className="rounded-xl w-full"
+            onClick={() => setShowModal(true)}
           />
         </div>
         <div className="grid grid-cols-4 gap-4">{navImages}</div>
       </div>
+      {showModal && (
+        <Suspense fallback={<div>Loading...</div>}>
+          {createPortal(
+            <ImageModal
+              image={currentImage}
+              onClose={() => setShowModal(false)}
+            />,
+            document.body
+          )}
+        </Suspense>
+      )}
     </>
   );
 };

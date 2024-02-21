@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/index.js",
-    "devstart": "nodemon ./dist/index.js",
+    "devstart": "nodemon -L ./app.ts",
     "tsc": "npx tsc"
   },
   "author": "Lion",

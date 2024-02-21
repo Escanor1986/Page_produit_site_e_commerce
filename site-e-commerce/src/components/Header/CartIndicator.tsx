@@ -1,4 +1,4 @@
-import Portal from '../../portals/usePortal';
+import Portal from '../../portals/useHeaderPortal';
 
 function CartIndicator() {
   return (
