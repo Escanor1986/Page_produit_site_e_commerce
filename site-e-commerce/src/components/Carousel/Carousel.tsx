@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
 
 const ImageModal = lazy(() => import('../../modals/CarouselModal'));
