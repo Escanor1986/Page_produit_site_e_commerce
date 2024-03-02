@@ -16,8 +16,8 @@ function Header() {
 
   return (
     <>
-      <header className="mx-8 px-8 pl-4 pr-4 border-b-2 border-b-header-border-color flex justify-between items-center">
-        <section className="flex flex-row items-center">
+      <header className="relative mx-8 px-8 pl-4 pr-4 border-b-2 border-b-header-border-color flex justify-between items-center">
+        <section className="opened-modal-wrapper flex flex-row items-center">
           <Link to="/">
             <h1 className="text-black dark:text-white text-3xl font-bold mr-12">
               sneakers

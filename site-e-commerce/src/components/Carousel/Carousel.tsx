@@ -16,7 +16,6 @@ const Carousel = () => {
 
   const handleImageClick = (image: string) => {
     setCurrentImage(image);
-    setShowModal(true);
   };
 
   const navImages = images.map((item, index) => (
@@ -36,7 +35,7 @@ const Carousel = () => {
           <img
             src={currentImage}
             alt="Grande Image"
-            className="rounded-xl w-full"
+            className="rounded-xl w-full cursor-pointer"
             onClick={() => setShowModal(true)}
           />
         </div>
@@ -45,10 +44,7 @@ const Carousel = () => {
       {showModal && (
         <Suspense fallback={<div>Loading...</div>}>
           {createPortal(
-            <ImageModal
-              image={currentImage}
-              onClose={() => setShowModal(false)}
-            />,
+            <ImageModal images={images} onClose={() => setShowModal(false)} />,
             document.body
           )}
         </Suspense>

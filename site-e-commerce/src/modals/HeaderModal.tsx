@@ -37,7 +37,7 @@ export default function Modal({ onClose }: ModalProps) {
 
   return (
     <section
-      className="modal absolute top-36 right-2 z-10 flex justify-end items-center"
+      className="modal absolute top-28 left-3/4  z-10 flex justify-end items-center"
       ref={modalRef}
     >
       <div className="modal-wrapper flex flex-col bg-white m-0 border-transparent rounded-md shadow-2xl">
