@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   front:
@@ -10,8 +10,18 @@ services:
     build: api
     tty: true
     stdin_open: true
+    depends_on:
+      - db
+      - adminer
     ports:
       - "3000:3000"
-    volumes:
-      - ./api:/api
 
+  db:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
