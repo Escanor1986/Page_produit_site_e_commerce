@@ -16,8 +16,8 @@ function HomePage() {
 
   return (
     <>
-      <main className="cart-wrapper flex flex-row">
-        <div className="left-cart-content flex items-center">
+      <main className="cart-wrapper flex flex-col lg:flex-row">
+        <div className="left-cart-content flex items-center mb-6 md:mb-0">
           <Suspense
             fallback={<i className="fa-regular fa-spinner fa-spin"></i>}
           >
